@@ -2,6 +2,7 @@
 BabySteps.API/bin/
 BabySteps.API/obj/
 BabySteps.API/appsettings.Development.json
+BabySteps.API/wwwroot/uploads/
 
 # Node / React
 BabySteps.Web/node_modules/
@@ -11,3 +12,6 @@ BabySteps.Web/.env
 
 # OS
 .DS_Store
+
+# Claude Code
+.claude/
