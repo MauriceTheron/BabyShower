@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: 248 243 241;
+  --color-header: 229 158 175;
+  --color-btn-category: 65 79 111;
+  --color-btn-store: 222 195 179;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(var(--color-background));
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

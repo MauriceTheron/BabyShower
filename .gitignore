@@ -1,0 +1,13 @@
+# .NET
+BabySteps.API/bin/
+BabySteps.API/obj/
+BabySteps.API/appsettings.Development.json
+
+# Node / React
+BabySteps.Web/node_modules/
+BabySteps.Web/dist/
+BabySteps.Web/.env.local
+BabySteps.Web/.env
+
+# OS
+.DS_Store
