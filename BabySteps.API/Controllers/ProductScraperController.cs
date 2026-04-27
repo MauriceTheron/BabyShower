@@ -10,7 +10,7 @@ public record ScrapeRequestDto(string Url);
 [Route("api/product-scraper")]
 [Authorize(Roles = "Host,Admin")]
 public class ProductScraperController(IProductScraperService scraper) : ControllerBase
-{
+{   
     [HttpPost]
     public async Task<ActionResult<ProductScrapeResult>> Scrape([FromBody] ScrapeRequestDto dto)
     {
