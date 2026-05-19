@@ -278,34 +278,6 @@ namespace BabySteps.API.Migrations
                     b.ToTable("ProductLists");
                 });
 
-            modelBuilder.Entity("BabySteps.API.Models.ProductListUsage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("HostId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("ProductListId")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime>("UsedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("HostId");
-
-                    b.HasIndex("ProductListId", "HostId")
-                        .IsUnique();
-
-                    b.ToTable("ProductListUsages");
-                });
-
             modelBuilder.Entity("BabySteps.API.Models.ProductListItem", b =>
                 {
                     b.Property<int>("Id")
@@ -354,6 +326,34 @@ namespace BabySteps.API.Migrations
                     b.HasIndex("ProductListId");
 
                     b.ToTable("ProductListItems");
+                });
+
+            modelBuilder.Entity("BabySteps.API.Models.ProductListUsage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("HostId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("ProductListId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("UsedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HostId");
+
+                    b.HasIndex("ProductListId", "HostId")
+                        .IsUnique();
+
+                    b.ToTable("ProductListUsages");
                 });
 
             modelBuilder.Entity("BabySteps.API.Models.Reservation", b =>

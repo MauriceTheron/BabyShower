@@ -80,7 +80,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<Rsvp>()
-            .HasIndex(r => new { r.UserId, r.EventId })
+            .HasIndex(r => new { r.UserId, r.EventId, r.EventType })
             .IsUnique();
 
         builder.Entity<ProductListItem>()
